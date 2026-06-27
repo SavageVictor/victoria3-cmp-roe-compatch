@@ -1,0 +1,138 @@
+# Sakuya Cheat Menu Pro - Block 3 Law special scripted guis
+
+sakuya_b3_law_caste_hegemony_visible_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		has_dlc_feature = ip2_content
+		OR = {
+			has_social_hierarchy = british_indian_caste_system
+			any_country = {
+				has_variable = sakuya_mark_country_target
+				has_social_hierarchy = british_indian_caste_system
+			}
+		}
+	}
+}
+
+sakuya_b3_law_edo_social_system_visible_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			has_social_hierarchy = edo_system
+			any_country = {
+				has_variable = sakuya_mark_country_target
+				has_social_hierarchy = edo_system
+			}
+		}
+	}
+}
+
+sakuya_b3_law_japan_tag_visible_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			c:JAP ?= this
+			any_country = {
+				has_variable = sakuya_mark_country_target
+				c:JAP ?= this
+			}
+		}
+	}
+}
+
+sakuya_b3_law_japanese_country_visible_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			country_has_primary_culture = cu:japanese
+			any_country = {
+				has_variable = sakuya_mark_country_target
+				country_has_primary_culture = cu:japanese
+			}
+		}
+	}
+}
+
+sakuya_b3_law_sakoku_visible_check = {
+	scope = country
+	is_shown = {
+		is_player = yes
+		OR = {
+			AND = {
+				country_has_primary_culture = cu:japanese
+				any_scope_state = {
+					state_region = s:STATE_KYUSHU
+					is_largest_state_in_region = yes
+				}
+			}
+			any_country = {
+				has_variable = sakuya_mark_country_target
+				country_has_primary_culture = cu:japanese
+				any_scope_state = {
+					state_region = s:STATE_KYUSHU
+					is_largest_state_in_region = yes
+				}
+			}
+		}
+	}
+}
+
+# RoE Compatch additions
+sakuya_b3_law_law_arcane_ascendancy_active_check = { scope = country is_shown = { is_player = yes has_law = law_type:law_arcane_ascendancy } }
+sakuya_b3_law_law_arcane_ascendancy_apply_player = { scope = country is_shown = { is_player = yes } effect = { sakuya_b3_activate_law_player_effect = { LAW = law_arcane_ascendancy } } }
+sakuya_b3_law_law_arcane_ascendancy_apply_marked = { scope = country is_shown = { is_player = yes } effect = { sakuya_b3_activate_law_marked_country_effect = { LAW = law_arcane_ascendancy } } }
+sakuya_b3_law_law_arcane_regulations_active_check = { scope = country is_shown = { is_player = yes has_law = law_type:law_arcane_regulations } }
+sakuya_b3_law_law_arcane_regulations_apply_player = { scope = country is_shown = { is_player = yes } effect = { sakuya_b3_activate_law_player_effect = { LAW = law_arcane_regulations } } }
+sakuya_b3_law_law_arcane_regulations_apply_marked = { scope = country is_shown = { is_player = yes } effect = { sakuya_b3_activate_law_marked_country_effect = { LAW = law_arcane_regulations } } }
+sakuya_b3_law_law_court_mages_active_check = { scope = country is_shown = { is_player = yes has_law = law_type:law_court_mages } }
+sakuya_b3_law_law_court_mages_apply_player = { scope = country is_shown = { is_player = yes } effect = { sakuya_b3_activate_law_player_effect = { LAW = law_court_mages } } }
+sakuya_b3_law_law_court_mages_apply_marked = { scope = country is_shown = { is_player = yes } effect = { sakuya_b3_activate_law_marked_country_effect = { LAW = law_court_mages } } }
+sakuya_b3_law_law_creed_of_hasal_active_check = { scope = country is_shown = { is_player = yes has_law = law_type:law_creed_of_hasal } }
+sakuya_b3_law_law_creed_of_hasal_apply_player = { scope = country is_shown = { is_player = yes } effect = { sakuya_b3_activate_law_player_effect = { LAW = law_creed_of_hasal } } }
+sakuya_b3_law_law_creed_of_hasal_apply_marked = { scope = country is_shown = { is_player = yes } effect = { sakuya_b3_activate_law_marked_country_effect = { LAW = law_creed_of_hasal } } }
+sakuya_b3_law_law_environmental_regulation_active_check = { scope = country is_shown = { is_player = yes has_law = law_type:law_environmental_regulation } }
+sakuya_b3_law_law_environmental_regulation_apply_player = { scope = country is_shown = { is_player = yes } effect = { sakuya_b3_activate_law_player_effect = { LAW = law_environmental_regulation } } }
+sakuya_b3_law_law_environmental_regulation_apply_marked = { scope = country is_shown = { is_player = yes } effect = { sakuya_b3_activate_law_marked_country_effect = { LAW = law_environmental_regulation } } }
+sakuya_b3_law_law_genetic_testing_active_check = { scope = country is_shown = { is_player = yes has_law = law_type:law_genetic_testing } }
+sakuya_b3_law_law_genetic_testing_apply_player = { scope = country is_shown = { is_player = yes } effect = { sakuya_b3_activate_law_player_effect = { LAW = law_genetic_testing } } }
+sakuya_b3_law_law_genetic_testing_apply_marked = { scope = country is_shown = { is_player = yes } effect = { sakuya_b3_activate_law_marked_country_effect = { LAW = law_genetic_testing } } }
+sakuya_b3_law_law_hedge_practice_active_check = { scope = country is_shown = { is_player = yes has_law = law_type:law_hedge_practice } }
+sakuya_b3_law_law_hedge_practice_apply_player = { scope = country is_shown = { is_player = yes } effect = { sakuya_b3_activate_law_player_effect = { LAW = law_hedge_practice } } }
+sakuya_b3_law_law_hedge_practice_apply_marked = { scope = country is_shown = { is_player = yes } effect = { sakuya_b3_activate_law_marked_country_effect = { LAW = law_hedge_practice } } }
+sakuya_b3_law_law_magic_banned_active_check = { scope = country is_shown = { is_player = yes has_law = law_type:law_magic_banned } }
+sakuya_b3_law_law_magic_banned_apply_player = { scope = country is_shown = { is_player = yes } effect = { sakuya_b3_activate_law_player_effect = { LAW = law_magic_banned } } }
+sakuya_b3_law_law_magic_banned_apply_marked = { scope = country is_shown = { is_player = yes } effect = { sakuya_b3_activate_law_marked_country_effect = { LAW = law_magic_banned } } }
+sakuya_b3_law_law_magical_schools_active_check = { scope = country is_shown = { is_player = yes has_law = law_type:law_magical_schools } }
+sakuya_b3_law_law_magical_schools_apply_player = { scope = country is_shown = { is_player = yes } effect = { sakuya_b3_activate_law_player_effect = { LAW = law_magical_schools } } }
+sakuya_b3_law_law_magical_schools_apply_marked = { scope = country is_shown = { is_player = yes } effect = { sakuya_b3_activate_law_marked_country_effect = { LAW = law_magical_schools } } }
+sakuya_b3_law_law_panopticon_active_check = { scope = country is_shown = { is_player = yes has_law = law_type:law_panopticon } }
+sakuya_b3_law_law_panopticon_apply_player = { scope = country is_shown = { is_player = yes } effect = { sakuya_b3_activate_law_player_effect = { LAW = law_panopticon } } }
+sakuya_b3_law_law_panopticon_apply_marked = { scope = country is_shown = { is_player = yes } effect = { sakuya_b3_activate_law_marked_country_effect = { LAW = law_panopticon } } }
+sakuya_b3_law_law_pest_control_active_check = { scope = country is_shown = { is_player = yes has_law = law_type:law_pest_control } }
+sakuya_b3_law_law_pest_control_apply_player = { scope = country is_shown = { is_player = yes } effect = { sakuya_b3_activate_law_player_effect = { LAW = law_pest_control } } }
+sakuya_b3_law_law_pest_control_apply_marked = { scope = country is_shown = { is_player = yes } effect = { sakuya_b3_activate_law_marked_country_effect = { LAW = law_pest_control } } }
+sakuya_b3_law_law_religious_sanctioned_magic_active_check = { scope = country is_shown = { is_player = yes has_law = law_type:law_religious_sanctioned_magic } }
+sakuya_b3_law_law_religious_sanctioned_magic_apply_player = { scope = country is_shown = { is_player = yes } effect = { sakuya_b3_activate_law_player_effect = { LAW = law_religious_sanctioned_magic } } }
+sakuya_b3_law_law_religious_sanctioned_magic_apply_marked = { scope = country is_shown = { is_player = yes } effect = { sakuya_b3_activate_law_marked_country_effect = { LAW = law_religious_sanctioned_magic } } }
+sakuya_b3_law_law_sanctioned_magic_active_check = { scope = country is_shown = { is_player = yes has_law = law_type:law_sanctioned_magic } }
+sakuya_b3_law_law_sanctioned_magic_apply_player = { scope = country is_shown = { is_player = yes } effect = { sakuya_b3_activate_law_player_effect = { LAW = law_sanctioned_magic } } }
+sakuya_b3_law_law_sanctioned_magic_apply_marked = { scope = country is_shown = { is_player = yes } effect = { sakuya_b3_activate_law_marked_country_effect = { LAW = law_sanctioned_magic } } }
+sakuya_b3_law_law_wizards_suppressed_active_check = { scope = country is_shown = { is_player = yes has_law = law_type:law_wizards_suppressed } }
+sakuya_b3_law_law_wizards_suppressed_apply_player = { scope = country is_shown = { is_player = yes } effect = { sakuya_b3_activate_law_player_effect = { LAW = law_wizards_suppressed } } }
+sakuya_b3_law_law_wizards_suppressed_apply_marked = { scope = country is_shown = { is_player = yes } effect = { sakuya_b3_activate_law_marked_country_effect = { LAW = law_wizards_suppressed } } }
+sakuya_b3_law_law_matriarchy_active_check = { scope = country is_shown = { is_player = yes has_law = law_type:law_matriarchy } }
+sakuya_b3_law_law_matriarchy_apply_player = { scope = country is_shown = { is_player = yes } effect = { sakuya_b3_activate_law_player_effect = { LAW = law_matriarchy } } }
+sakuya_b3_law_law_matriarchy_apply_marked = { scope = country is_shown = { is_player = yes } effect = { sakuya_b3_activate_law_marked_country_effect = { LAW = law_matriarchy } } }
+sakuya_b3_law_law_avian_caste_codified_active_check = { scope = country is_shown = { is_player = yes has_law = law_type:law_avian_caste_codified } }
+sakuya_b3_law_law_avian_caste_codified_apply_player = { scope = country is_shown = { is_player = yes } effect = { sakuya_b3_activate_law_player_effect = { LAW = law_avian_caste_codified } } }
+sakuya_b3_law_law_avian_caste_codified_apply_marked = { scope = country is_shown = { is_player = yes } effect = { sakuya_b3_activate_law_marked_country_effect = { LAW = law_avian_caste_codified } } }
+sakuya_b3_law_law_avian_caste_enforced_active_check = { scope = country is_shown = { is_player = yes has_law = law_type:law_avian_caste_enforced } }
+sakuya_b3_law_law_avian_caste_enforced_apply_player = { scope = country is_shown = { is_player = yes } effect = { sakuya_b3_activate_law_player_effect = { LAW = law_avian_caste_enforced } } }
+sakuya_b3_law_law_avian_caste_enforced_apply_marked = { scope = country is_shown = { is_player = yes } effect = { sakuya_b3_activate_law_marked_country_effect = { LAW = law_avian_caste_enforced } } }
+sakuya_b3_law_law_avian_caste_not_enforced_active_check = { scope = country is_shown = { is_player = yes has_law = law_type:law_avian_caste_not_enforced } }
+sakuya_b3_law_law_avian_caste_not_enforced_apply_player = { scope = country is_shown = { is_player = yes } effect = { sakuya_b3_activate_law_player_effect = { LAW = law_avian_caste_not_enforced } } }
+sakuya_b3_law_law_avian_caste_not_enforced_apply_marked = { scope = country is_shown = { is_player = yes } effect = { sakuya_b3_activate_law_marked_country_effect = { LAW = law_avian_caste_not_enforced } } }
