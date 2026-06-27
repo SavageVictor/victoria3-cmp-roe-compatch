@@ -1,0 +1,35 @@
+# Sakuya Cheat Menu Pro - RoE Compatch: Institution & Decree Helper Effects
+
+# Institution activation effects (modeled after law activation pattern)
+sakuya_roe_institution_player_effect = {
+    activate_institution = institution:$INST$
+}
+
+sakuya_roe_institution_marked_country_effect = {
+    sakuya_b3_resolve_marked_country_effect = yes
+    if = {
+        limit = {
+            exists = scope:sakuya_b3_marked_country_scope
+        }
+        scope:sakuya_b3_marked_country_scope = {
+            activate_institution = institution:$INST$
+        }
+    }
+}
+
+# Decree activation effects
+sakuya_roe_decree_player_effect = {
+    activate_decree = decree:$DECREE$
+}
+
+sakuya_roe_decree_marked_country_effect = {
+    sakuya_b3_resolve_marked_country_effect = yes
+    if = {
+        limit = {
+            exists = scope:sakuya_b3_marked_country_scope
+        }
+        scope:sakuya_b3_marked_country_scope = {
+            activate_decree = decree:$DECREE$
+        }
+    }
+}

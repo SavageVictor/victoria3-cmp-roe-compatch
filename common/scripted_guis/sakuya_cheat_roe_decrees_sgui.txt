@@ -1,0 +1,28 @@
+# Sakuya Cheat Menu Pro - RoE Compatch: Decrees
+
+sakuya_b3_decree_decree_adventurer_incentives_add = { scope = country is_shown = { is_player = yes } effect = { sakuya_roe_decree_player_effect = { DECREE = decree_adventurer_incentives } } }
+sakuya_b3_decree_decree_adventurer_incentives_add_marked = { scope = country is_shown = { is_player = yes } effect = { sakuya_roe_decree_marked_country_effect = { DECREE = decree_adventurer_incentives } } }
+sakuya_b3_decree_decree_encourage_agricultural_industry_add = { scope = country is_shown = { is_player = yes } effect = { sakuya_roe_decree_player_effect = { DECREE = decree_encourage_agricultural_industry } } }
+sakuya_b3_decree_decree_encourage_agricultural_industry_add_marked = { scope = country is_shown = { is_player = yes } effect = { sakuya_roe_decree_marked_country_effect = { DECREE = decree_encourage_agricultural_industry } } }
+sakuya_b3_decree_decree_encourage_manufacturing_industry_add = { scope = country is_shown = { is_player = yes } effect = { sakuya_roe_decree_player_effect = { DECREE = decree_encourage_manufacturing_industry } } }
+sakuya_b3_decree_decree_encourage_manufacturing_industry_add_marked = { scope = country is_shown = { is_player = yes } effect = { sakuya_roe_decree_marked_country_effect = { DECREE = decree_encourage_manufacturing_industry } } }
+sakuya_b3_decree_decree_encourage_resource_industry_add = { scope = country is_shown = { is_player = yes } effect = { sakuya_roe_decree_player_effect = { DECREE = decree_encourage_resource_industry } } }
+sakuya_b3_decree_decree_encourage_resource_industry_add_marked = { scope = country is_shown = { is_player = yes } effect = { sakuya_roe_decree_marked_country_effect = { DECREE = decree_encourage_resource_industry } } }
+sakuya_b3_decree_decree_enlistment_efforts_add = { scope = country is_shown = { is_player = yes } effect = { sakuya_roe_decree_player_effect = { DECREE = decree_enlistment_efforts } } }
+sakuya_b3_decree_decree_enlistment_efforts_add_marked = { scope = country is_shown = { is_player = yes } effect = { sakuya_roe_decree_marked_country_effect = { DECREE = decree_enlistment_efforts } } }
+sakuya_b3_decree_decree_establish_missions_add = { scope = country is_shown = { is_player = yes } effect = { sakuya_roe_decree_player_effect = { DECREE = decree_establish_missions } } }
+sakuya_b3_decree_decree_establish_missions_add_marked = { scope = country is_shown = { is_player = yes } effect = { sakuya_roe_decree_marked_country_effect = { DECREE = decree_establish_missions } } }
+sakuya_b3_decree_decree_greener_grass_campaign_add = { scope = country is_shown = { is_player = yes } effect = { sakuya_roe_decree_player_effect = { DECREE = decree_greener_grass_campaign } } }
+sakuya_b3_decree_decree_greener_grass_campaign_add_marked = { scope = country is_shown = { is_player = yes } effect = { sakuya_roe_decree_marked_country_effect = { DECREE = decree_greener_grass_campaign } } }
+sakuya_b3_decree_decree_promote_national_values_add = { scope = country is_shown = { is_player = yes } effect = { sakuya_roe_decree_player_effect = { DECREE = decree_promote_national_values } } }
+sakuya_b3_decree_decree_promote_national_values_add_marked = { scope = country is_shown = { is_player = yes } effect = { sakuya_roe_decree_marked_country_effect = { DECREE = decree_promote_national_values } } }
+sakuya_b3_decree_decree_promote_social_mobility_add = { scope = country is_shown = { is_player = yes } effect = { sakuya_roe_decree_player_effect = { DECREE = decree_promote_social_mobility } } }
+sakuya_b3_decree_decree_promote_social_mobility_add_marked = { scope = country is_shown = { is_player = yes } effect = { sakuya_roe_decree_marked_country_effect = { DECREE = decree_promote_social_mobility } } }
+sakuya_b3_decree_decree_road_maintenance_add = { scope = country is_shown = { is_player = yes } effect = { sakuya_roe_decree_player_effect = { DECREE = decree_road_maintenance } } }
+sakuya_b3_decree_decree_road_maintenance_add_marked = { scope = country is_shown = { is_player = yes } effect = { sakuya_roe_decree_marked_country_effect = { DECREE = decree_road_maintenance } } }
+sakuya_b3_decree_decree_special_measures_add = { scope = country is_shown = { is_player = yes } effect = { sakuya_roe_decree_player_effect = { DECREE = decree_special_measures } } }
+sakuya_b3_decree_decree_special_measures_add_marked = { scope = country is_shown = { is_player = yes } effect = { sakuya_roe_decree_marked_country_effect = { DECREE = decree_special_measures } } }
+sakuya_b3_decree_decree_treasure_finding_add = { scope = country is_shown = { is_player = yes } effect = { sakuya_roe_decree_player_effect = { DECREE = decree_treasure_finding } } }
+sakuya_b3_decree_decree_treasure_finding_add_marked = { scope = country is_shown = { is_player = yes } effect = { sakuya_roe_decree_marked_country_effect = { DECREE = decree_treasure_finding } } }
+sakuya_b3_decree_decree_wanderlust_colonization_add = { scope = country is_shown = { is_player = yes } effect = { sakuya_roe_decree_player_effect = { DECREE = decree_wanderlust_colonization } } }
+sakuya_b3_decree_decree_wanderlust_colonization_add_marked = { scope = country is_shown = { is_player = yes } effect = { sakuya_roe_decree_marked_country_effect = { DECREE = decree_wanderlust_colonization } } }

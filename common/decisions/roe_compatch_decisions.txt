@@ -1,0 +1,16 @@
+# Cheat Menu Pro - RoE Compatch: Decision to access RoE cheat panel
+roe_compatch_open_menu = {
+    is_shown = {
+        is_player = yes
+        has_dlc_feature = enlightenment
+    }
+    possible = {
+        is_player = yes
+    }
+    when_taken = {
+        trigger_event = { id = roe_compatch_menu.1 }
+    }
+    ai_chance = {
+        base = 0
+    }
+}

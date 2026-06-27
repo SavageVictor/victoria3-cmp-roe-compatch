@@ -1,0 +1,45 @@
+# Sakuya Cheat Menu Pro - RoE Compatch: Interest Group GUI Entries
+
+# Mage IG selection variables
+sakuya_b3_ig_ig_mages_boost = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        NOT = { has_variable = sakuya_b5_sel_ig_mages }
+        exists = ig:ig_mages
+    }
+    effect = {
+        remove_variable_list = { name = sakuya_b5_sel_ig_armed_forces name = sakuya_b5_sel_ig_devout name = sakuya_b5_sel_ig_industrialists name = sakuya_b5_sel_ig_intelligentsia name = sakuya_b5_sel_ig_landowners name = sakuya_b5_sel_ig_petty_bourgeoisie name = sakuya_b5_sel_ig_rural_folk name = sakuya_b5_sel_ig_trade_unions name = sakuya_b5_sel_ig_mages name = sakuya_b5_sel_ig_clans }
+        set_variable = sakuya_b5_sel_ig_mages
+    }
+}
+
+sakuya_b3_ig_ig_mages_boost_active = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        has_variable = sakuya_b5_sel_ig_mages
+    }
+}
+
+# Clan IG selection variables
+sakuya_b3_ig_ig_clans_boost = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        NOT = { has_variable = sakuya_b5_sel_ig_clans }
+        exists = ig:ig_clans
+    }
+    effect = {
+        remove_variable_list = { name = sakuya_b5_sel_ig_armed_forces name = sakuya_b5_sel_ig_devout name = sakuya_b5_sel_ig_industrialists name = sakuya_b5_sel_ig_intelligentsia name = sakuya_b5_sel_ig_landowners name = sakuya_b5_sel_ig_petty_bourgeoisie name = sakuya_b5_sel_ig_rural_folk name = sakuya_b5_sel_ig_trade_unions name = sakuya_b5_sel_ig_mages name = sakuya_b5_sel_ig_clans }
+        set_variable = sakuya_b5_sel_ig_clans
+    }
+}
+
+sakuya_b3_ig_ig_clans_boost_active = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        has_variable = sakuya_b5_sel_ig_clans
+    }
+}

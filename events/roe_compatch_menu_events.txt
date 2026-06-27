@@ -1,0 +1,335 @@
+namespace = roe_compatch_menu
+
+# Main RoE Compatch menu event
+country_event = {
+    id = roe_compatch_menu.1
+    title = roe_compatch_menu.1.t
+    desc = roe_compatch_menu.1.d
+    picture = GFX_evt_parliament
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = roe_compatch_menu.1.option.laws
+        trigger_event = { id = roe_compatch_menu.2 }
+    }
+    option = {
+        name = roe_compatch_menu.1.option.igs
+        trigger_event = { id = roe_compatch_menu.3 }
+    }
+    option = {
+        name = roe_compatch_menu.1.option.institutions
+        trigger_event = { id = roe_compatch_menu.4 }
+    }
+    option = {
+        name = roe_compatch_menu.1.option.decrees
+        trigger_event = { id = roe_compatch_menu.5 }
+    }
+    option = {
+        name = roe_compatch_menu.1.option.goods
+        trigger_event = { id = roe_compatch_menu.6 }
+    }
+    option = {
+        name = roe_compatch_menu.1.option.religions
+        trigger_event = { id = roe_compatch_menu.7 }
+    }
+    option = {
+        name = roe_compatch_menu.1.option.cultures
+        trigger_event = { id = roe_compatch_menu.8 }
+    }
+    option = {
+        name = roe_compatch_menu.1.option.close
+    }
+}
+
+# Laws sub-menu
+country_event = {
+    id = roe_compatch_menu.2
+    title = roe_compatch_menu.2.t
+    desc = roe_compatch_menu.2.d
+    picture = GFX_evt_parliament
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = roe_compatch_menu.2.option.power
+        trigger_event = { id = roe_compatch_menu.2_power }
+    }
+    option = {
+        name = roe_compatch_menu.2.option.economy
+        trigger_event = { id = roe_compatch_menu.2_economy }
+    }
+    option = {
+        name = roe_compatch_menu.2.option.human_rights
+        trigger_event = { id = roe_compatch_menu.2_human_rights }
+    }
+    option = {
+        name = roe_compatch_menu.2.option.special
+        trigger_event = { id = roe_compatch_menu.2_special }
+    }
+    option = {
+        name = roe_compatch_menu.2.option.back
+        trigger_event = { id = roe_compatch_menu.1 }
+    }
+}
+
+# Generates law options dynamically - player country
+# Power laws
+country_event = {
+    id = roe_compatch_menu.2_power
+    title = roe_compatch_menu.2_power.t
+    desc = roe_compatch_menu.2_power.d
+    picture = GFX_evt_parliament
+    
+    is_triggered_only = yes
+    
+    immediate = {
+        # Set a variable to indicate which category
+        set_variable = roe_compatch_law_category_power
+    }
+    
+    option = { name = roe_compatch_law_civic_confederation effect = { activate_law = law_type:law_civic_confederation } }
+    option = { name = roe_compatch_law_ecumenical_recognition effect = { activate_law = law_type:law_ecumenical_recognition } }
+    option = { name = roe_compatch_law_magocracy effect = { activate_law = law_type:law_magocracy } }
+    option = { name = roe_compatch_law_plutocracy effect = { activate_law = law_type:law_plutocracy } }
+    option = { name = roe_compatch_law_anarchy_bandit effect = { activate_law = law_type:law_anarchy_bandit } }
+    option = { name = roe_compatch_menu.2.option.back effect = { trigger_event = { id = roe_compatch_menu.2 } } }
+}
+
+# Economy laws
+country_event = {
+    id = roe_compatch_menu.2_economy
+    title = roe_compatch_menu.2_economy.t
+    desc = roe_compatch_menu.2_economy.d
+    picture = GFX_evt_industry
+    
+    is_triggered_only = yes
+    
+    option = { name = roe_compatch_law_adventurer_freeholds effect = { activate_law = law_type:law_adventurer_freeholds } }
+    option = { name = roe_compatch_law_adventuring_economy effect = { activate_law = law_type:law_adventuring_economy } }
+    option = { name = roe_compatch_law_adventuring_economy_independent effect = { activate_law = law_type:law_adventuring_economy_independent } }
+    option = { name = roe_compatch_law_arcane_economy effect = { activate_law = law_type:law_arcane_economy } }
+    option = { name = roe_compatch_law_consumption_based_taxation_corsair effect = { activate_law = law_type:law_consumption_based_taxation_corsair } }
+    option = { name = roe_compatch_law_guild_bondage effect = { activate_law = law_type:law_guild_bondage } }
+    option = { name = roe_compatch_law_guild_system_consortium effect = { activate_law = law_type:law_guild_system_consortium } }
+    option = { name = roe_compatch_law_palace_economy effect = { activate_law = law_type:law_palace_economy } }
+    option = { name = roe_compatch_law_professional_army_corsair effect = { activate_law = law_type:law_professional_army_corsair } }
+    option = { name = roe_compatch_law_homesteading_sea effect = { activate_law = law_type:law_homesteading_sea } }
+    option = { name = roe_compatch_law_religious_tax effect = { activate_law = law_type:law_religious_tax } }
+    option = { name = roe_compatch_menu.2.option.back effect = { trigger_event = { id = roe_compatch_menu.2 } } }
+}
+
+# Human rights/society laws
+country_event = {
+    id = roe_compatch_menu.2_human_rights
+    title = roe_compatch_menu.2_human_rights.t
+    desc = roe_compatch_menu.2_human_rights.d
+    picture = GFX_evt_parliament
+    
+    is_triggered_only = yes
+    
+    option = { name = roe_compatch_law_avian_affirmative_action effect = { activate_law = law_type:law_avian_affirmative_action } }
+    option = { name = roe_compatch_law_men_in_the_workplace effect = { activate_law = law_type:law_men_in_the_workplace } }
+    option = { name = roe_compatch_law_men_own_property effect = { activate_law = law_type:law_men_own_property } }
+    option = { name = roe_compatch_law_dwarf_compulsory_guild_apprenticeship effect = { activate_law = law_type:law_dwarf_compulsory_guild_apprenticeship } }
+    option = { name = roe_compatch_law_dwarf_guild_privileges effect = { activate_law = law_type:law_dwarf_guild_privileges } }
+    option = { name = roe_compatch_law_dwarf_guilds_discouraged effect = { activate_law = law_type:law_dwarf_guilds_discouraged } }
+    option = { name = roe_compatch_law_dwarf_no_guild_privileges effect = { activate_law = law_type:law_dwarf_no_guild_privileges } }
+    option = { name = roe_compatch_law_industry_banned_druidic effect = { activate_law = law_type:law_industry_banned_druidic } }
+    option = { name = roe_compatch_law_industry_banned_unrecognized effect = { activate_law = law_type:law_industry_banned_unrecognized } }
+    option = { name = roe_compatch_law_landed_voting_halfling effect = { activate_law = law_type:law_landed_voting_halfling } }
+    option = { name = roe_compatch_law_no_restrictions effect = { activate_law = law_type:law_no_restrictions } }
+    option = { name = roe_compatch_law_orc_affirmative_action effect = { activate_law = law_type:law_orc_affirmative_action } }
+    option = { name = roe_compatch_law_orc_balanced_society effect = { activate_law = law_type:law_orc_balanced_society } }
+    option = { name = roe_compatch_law_orc_banners effect = { activate_law = law_type:law_orc_banners } }
+    option = { name = roe_compatch_law_orc_normal_society effect = { activate_law = law_type:law_orc_normal_society } }
+    option = { name = roe_compatch_law_orc_warrior_society effect = { activate_law = law_type:law_orc_warrior_society } }
+    option = { name = roe_compatch_law_serfdom_druidic effect = { activate_law = law_type:law_serfdom_druidic } }
+    option = { name = roe_compatch_law_war_slaves effect = { activate_law = law_type:law_war_slaves } }
+    option = { name = roe_compatch_menu.2.option.back effect = { trigger_event = { id = roe_compatch_menu.2 } } }
+}
+
+# Special/Magic laws
+country_event = {
+    id = roe_compatch_menu.2_special
+    title = roe_compatch_menu.2_special.t
+    desc = roe_compatch_menu.2_special.d
+    picture = GFX_evt_parliament
+    
+    is_triggered_only = yes
+    
+    option = { name = roe_compatch_law_arcane_ascendancy effect = { activate_law = law_type:law_arcane_ascendancy } }
+    option = { name = roe_compatch_law_arcane_regulations effect = { activate_law = law_type:law_arcane_regulations } }
+    option = { name = roe_compatch_law_court_mages effect = { activate_law = law_type:law_court_mages } }
+    option = { name = roe_compatch_law_creed_of_hasal effect = { activate_law = law_type:law_creed_of_hasal } }
+    option = { name = roe_compatch_law_environmental_regulation effect = { activate_law = law_type:law_environmental_regulation } }
+    option = { name = roe_compatch_law_genetic_testing effect = { activate_law = law_type:law_genetic_testing } }
+    option = { name = roe_compatch_law_hedge_practice effect = { activate_law = law_type:law_hedge_practice } }
+    option = { name = roe_compatch_law_magic_banned effect = { activate_law = law_type:law_magic_banned } }
+    option = { name = roe_compatch_law_magical_schools effect = { activate_law = law_type:law_magical_schools } }
+    option = { name = roe_compatch_law_panopticon effect = { activate_law = law_type:law_panopticon } }
+    option = { name = roe_compatch_law_pest_control effect = { activate_law = law_type:law_pest_control } }
+    option = { name = roe_compatch_law_religious_sanctioned_magic effect = { activate_law = law_type:law_religious_sanctioned_magic } }
+    option = { name = roe_compatch_law_sanctioned_magic effect = { activate_law = law_type:law_sanctioned_magic } }
+    option = { name = roe_compatch_law_wizards_suppressed effect = { activate_law = law_type:law_wizards_suppressed } }
+    option = { name = roe_compatch_law_matriarchy effect = { activate_law = law_type:law_matriarchy } }
+    option = { name = roe_compatch_law_avian_caste_codified effect = { activate_law = law_type:law_avian_caste_codified } }
+    option = { name = roe_compatch_law_avian_caste_enforced effect = { activate_law = law_type:law_avian_caste_enforced } }
+    option = { name = roe_compatch_law_avian_caste_not_enforced effect = { activate_law = law_type:law_avian_caste_not_enforced } }
+    option = { name = roe_compatch_menu.2.option.back effect = { trigger_event = { id = roe_compatch_menu.2 } } }
+}
+
+# IG sub-menu
+country_event = {
+    id = roe_compatch_menu.3
+    title = roe_compatch_menu.3.t
+    desc = roe_compatch_menu.3.d
+    picture = GFX_evt_parliament
+    
+    is_triggered_only = yes
+    
+    option = { name = roe_compatch_ig_mages_boost effect = { if = { limit = { exists = ig:ig_mages } ig:ig_mages = { add_approval = 20 } } } }
+    option = { name = roe_compatch_ig_mages_clout effect = { if = { limit = { exists = ig:ig_mages } ig:ig_mages = { set_clout = 25 } } } }
+    option = { name = roe_compatch_ig_clans_boost effect = { if = { limit = { exists = ig:ig_clans } ig:ig_clans = { add_approval = 20 } } } }
+    option = { name = roe_compatch_ig_clans_clout effect = { if = { limit = { exists = ig:ig_clans } ig:ig_clans = { set_clout = 25 } } } }
+    option = { name = roe_compatch_menu.3.option.back effect = { trigger_event = { id = roe_compatch_menu.1 } } }
+}
+
+# Institution sub-menu
+country_event = {
+    id = roe_compatch_menu.4
+    title = roe_compatch_menu.4.t
+    desc = roe_compatch_menu.4.d
+    picture = GFX_evt_parliament
+    
+    is_triggered_only = yes
+    
+    option = { name = roe_compatch_inst_environment effect = { activate_institution = institution:institution_environment } }
+    option = { name = roe_compatch_inst_police effect = { activate_institution = institution:institution_police } }
+    option = { name = roe_compatch_menu.4.option.back effect = { trigger_event = { id = roe_compatch_menu.1 } } }
+}
+
+# Decree sub-menu
+country_event = {
+    id = roe_compatch_menu.5
+    title = roe_compatch_menu.5.t
+    desc = roe_compatch_menu.5.d
+    picture = GFX_evt_parliament
+    
+    is_triggered_only = yes
+    
+    option = { name = roe_compatch_decree_adventurer_incentives effect = { activate_decree = decree:decree_adventurer_incentives } }
+    option = { name = roe_compatch_decree_encourage_agricultural effect = { activate_decree = decree:decree_encourage_agricultural_industry } }
+    option = { name = roe_compatch_decree_encourage_manufacturing effect = { activate_decree = decree:decree_encourage_manufacturing_industry } }
+    option = { name = roe_compatch_decree_encourage_resource effect = { activate_decree = decree:decree_encourage_resource_industry } }
+    option = { name = roe_compatch_decree_enlistment_efforts effect = { activate_decree = decree:decree_enlistment_efforts } }
+    option = { name = roe_compatch_decree_establish_missions effect = { activate_decree = decree:decree_establish_missions } }
+    option = { name = roe_compatch_decree_greener_grass effect = { activate_decree = decree:decree_greener_grass_campaign } }
+    option = { name = roe_compatch_decree_promote_national_values effect = { activate_decree = decree:decree_promote_national_values } }
+    option = { name = roe_compatch_decree_promote_social_mobility effect = { activate_decree = decree:decree_promote_social_mobility } }
+    option = { name = roe_compatch_decree_road_maintenance effect = { activate_decree = decree:decree_road_maintenance } }
+    option = { name = roe_compatch_decree_special_measures effect = { activate_decree = decree:decree_special_measures } }
+    option = { name = roe_compatch_decree_treasure_finding effect = { activate_decree = decree:decree_treasure_finding } }
+    option = { name = roe_compatch_decree_wanderlust effect = { activate_decree = decree:decree_wanderlust_colonization } }
+    option = { name = roe_compatch_menu.5.option.back effect = { trigger_event = { id = roe_compatch_menu.1 } } }
+}
+
+
+# Goods sub-menu
+country_event = {
+    id = roe_compatch_menu.6
+    title = roe_compatch_menu.6.t
+    desc = roe_compatch_menu.6.d
+    picture = GFX_evt_industry
+    is_triggered_only = yes
+    option = { name = roe_compatch_goods_relics effect = { add_modifier = { name = sakuya_cheat_b3_goods_build_tp_default_default months = 1200 } } }
+    option = { name = roe_compatch_goods_luxury_potions effect = { add_modifier = { name = sakuya_cheat_b3_goods_build_tp_default_default months = 1200 } } }
+    option = { name = roe_compatch_goods_cloudsilver effect = { add_modifier = { name = sakuya_cheat_b3_goods_build_tp_default_default months = 1200 } } }
+    option = { name = roe_compatch_goods_blubber effect = { add_modifier = { name = sakuya_cheat_b3_goods_build_tp_default_default months = 1200 } } }
+    option = { name = roe_compatch_goods_godsblood effect = { add_modifier = { name = sakuya_cheat_b3_goods_build_tp_default_default months = 1200 } } }
+    option = { name = roe_compatch_goods_wishstone effect = { add_modifier = { name = sakuya_cheat_b3_goods_build_tp_default_default months = 1200 } } }
+    option = { name = roe_compatch_goods_monster_essence effect = { add_modifier = { name = sakuya_cheat_b3_goods_build_tp_default_default months = 1200 } } }
+    option = { name = roe_compatch_goods_potions effect = { add_modifier = { name = sakuya_cheat_b3_goods_build_tp_default_default months = 1200 } } }
+    option = { name = roe_compatch_goods_ectoplasm effect = { add_modifier = { name = sakuya_cheat_b3_goods_build_tp_default_default months = 1200 } } }
+    option = { name = roe_compatch_goods_airships effect = { add_modifier = { name = sakuya_cheat_b3_goods_build_tp_default_default months = 1200 } } }
+    option = { name = roe_compatch_goods_thaumacores effect = { add_modifier = { name = sakuya_cheat_b3_goods_build_tp_default_default months = 1200 } } }
+    option = { name = roe_compatch_goods_gizmos effect = { add_modifier = { name = sakuya_cheat_b3_goods_build_tp_default_default months = 1200 } } }
+    option = { name = roe_compatch_goods_ice effect = { add_modifier = { name = sakuya_cheat_b3_goods_build_tp_default_default months = 1200 } } }
+    option = { name = roe_compatch_goods_arcane_foci effect = { add_modifier = { name = sakuya_cheat_b3_goods_build_tp_default_default months = 1200 } } }
+    option = { name = roe_compatch_menu.6.option.back effect = { trigger_event = { id = roe_compatch_menu.1 } } }
+}
+
+# Religions page 1
+country_event = {
+    id = roe_compatch_menu.7
+    title = roe_compatch_menu.7.t
+    desc = roe_compatch_menu.7.d
+    picture = GFX_evt_parliament
+    is_triggered_only = yes
+    option = { name = roe_compatch_rel_druidism effect = { set_state_religion = rel:druidism } }
+    option = { name = roe_compatch_rel_astral_path effect = { set_state_religion = rel:astral_path } }
+    option = { name = roe_compatch_rel_creed_of_hasal effect = { set_state_religion = rel:creed_of_hasal } }
+    option = { name = roe_compatch_rel_cult_of_the_sun effect = { set_state_religion = rel:cult_of_the_sun } }
+    option = { name = roe_compatch_rel_cult_of_war effect = { set_state_religion = rel:cult_of_war } }
+    option = { name = roe_compatch_rel_draconic_oath effect = { set_state_religion = rel:draconic_oath } }
+    option = { name = roe_compatch_rel_marktarian effect = { set_state_religion = rel:marktarian } }
+    option = { name = roe_compatch_rel_ossarian effect = { set_state_religion = rel:ossarian } }
+    option = { name = roe_compatch_rel_raven_queen effect = { set_state_religion = rel:raven_queen } }
+    option = { name = roe_compatch_rel_rose_court effect = { set_state_religion = rel:rose_court } }
+    option = { name = roe_compatch_rel_old_faith effect = { set_state_religion = rel:old_faith } }
+    option = { name = roe_compatch_rel_kragmorn effect = { set_state_religion = rel:kragmorn } }
+    option = { name = roe_compatch_rel_salt_crucible effect = { set_state_religion = rel:salt_crucible } }
+    option = { name = roe_compatch_rel_scourgelore effect = { set_state_religion = rel:scourgelore } }
+    option = { name = roe_compatch_menu.7.option.more effect = { trigger_event = { id = roe_compatch_menu.7b } } }
+    option = { name = roe_compatch_menu.7.option.back effect = { trigger_event = { id = roe_compatch_menu.1 } } }
+}
+
+# Religions page 2
+country_event = {
+    id = roe_compatch_menu.7b
+    title = roe_compatch_menu.7b.t
+    desc = roe_compatch_menu.7b.d
+    picture = GFX_evt_parliament
+    is_triggered_only = yes
+    option = { name = roe_compatch_rel_viticist effect = { set_state_religion = rel:viticist } }
+    option = { name = roe_compatch_rel_human_druidism effect = { set_state_religion = rel:human_druidism } }
+    option = { name = roe_compatch_rel_gnomish_druidism effect = { set_state_religion = rel:gnomish_druidism } }
+    option = { name = roe_compatch_rel_avian_druidism effect = { set_state_religion = rel:avian_druidism } }
+    option = { name = roe_compatch_rel_cult_of_knowledge effect = { set_state_religion = rel:cult_of_knowledge } }
+    option = { name = roe_compatch_rel_cult_of_commerce effect = { set_state_religion = rel:cult_of_commerce } }
+    option = { name = roe_compatch_rel_cult_of_the_sea effect = { set_state_religion = rel:cult_of_the_sea } }
+    option = { name = roe_compatch_rel_house_of_fate effect = { set_state_religion = rel:house_of_fate } }
+    option = { name = roe_compatch_rel_lunar_masquerade effect = { set_state_religion = rel:lunar_masquerade } }
+    option = { name = roe_compatch_rel_manifold_path effect = { set_state_religion = rel:manifold_path } }
+    option = { name = roe_compatch_rel_lords_of_avarice effect = { set_state_religion = rel:lords_of_avarice } }
+    option = { name = roe_compatch_rel_nilbogism effect = { set_state_religion = rel:nilbogism } }
+    option = { name = roe_compatch_rel_skystride effect = { set_state_religion = rel:skystride } }
+    option = { name = roe_compatch_rel_stigveldio effect = { set_state_religion = rel:stigveldio } }
+    option = { name = roe_compatch_rel_teomakti effect = { set_state_religion = rel:teomakti } }
+    option = { name = roe_compatch_menu.7.option.back effect = { trigger_event = { id = roe_compatch_menu.7 } } }
+}
+
+# Culture page 1
+country_event = {
+    id = roe_compatch_menu.8
+    title = roe_compatch_menu.8.t
+    desc = roe_compatch_menu.8.d
+    picture = GFX_evt_parliament
+    is_triggered_only = yes
+    option = { name = roe_compatch_culture_imperial effect = { set_country_culture = cu:imperial } }
+    option = { name = roe_compatch_culture_avalorean effect = { set_country_culture = cu:avalorean } }
+    option = { name = roe_compatch_culture_dumonian effect = { set_country_culture = cu:dumonian } }
+    option = { name = roe_compatch_culture_thalorian_heartland effect = { set_country_culture = cu:heartland_thalorian } }
+    option = { name = roe_compatch_culture_dorite effect = { set_country_culture = cu:dorite } }
+    option = { name = roe_compatch_culture_cerunite effect = { set_country_culture = cu:cerunite } }
+    option = { name = roe_compatch_culture_keldic effect = { set_country_culture = cu:keldic } }
+    option = { name = roe_compatch_culture_rannorian effect = { set_country_culture = cu:rannorian } }
+    option = { name = roe_compatch_culture_vystemian effect = { set_country_culture = cu:vystemian } }
+    option = { name = roe_compatch_culture_seleni effect = { set_country_culture = cu:seleni } }
+    option = { name = roe_compatch_culture_thiralian effect = { set_country_culture = cu:thiralian } }
+    option = { name = roe_compatch_culture_dewaric effect = { set_country_culture = cu:dewaric } }
+    option = { name = roe_compatch_culture_drogori effect = { set_country_culture = cu:drogori } }
+    option = { name = roe_compatch_culture_onghori effect = { set_country_culture = cu:onghori } }
+    option = { name = roe_compatch_menu.8.option.more effect = { trigger_event = { id = roe_compatch_menu.8b } } }
+    option = { name = roe_compatch_menu.8.option.back effect = { trigger_event = { id = roe_compatch_menu.1 } } }
+}

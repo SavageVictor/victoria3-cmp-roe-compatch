@@ -1,0 +1,107 @@
+# Sakuya Cheat Menu Pro - RoE Compatch: Interest Group Effects
+# Adds RoE-exclusive IGs to character IG assignment menus
+
+sakuya_cheat_roe_ig_set_effect = {
+    # Called after vanilla IG assignment to add RoE IGs
+    if = {
+        limit = { root = { has_variable = sakuya_b5_sel_ig_mages } }
+        set_interest_group = PREV.ig:ig_mages
+    }
+    else_if = {
+        limit = { root = { has_variable = sakuya_b5_sel_ig_clans } }
+        set_interest_group = PREV.ig:ig_clans
+    }
+}
+
+# IG suppression effects
+sakuya_b3_suppress_ig_mages = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        NOT = { has_variable = sakuya_b3_ig_suppressed_mages_var }
+        exists = ig:ig_mages
+    }
+    effect = {
+        set_variable = sakuya_b3_ig_suppressed_mages_var
+        ig:ig_mages = { suppress = yes }
+    }
+}
+
+sakuya_b3_unsuppress_ig_mages = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        has_variable = sakuya_b3_ig_suppressed_mages_var
+    }
+    effect = {
+        remove_variable = sakuya_b3_ig_suppressed_mages_var
+        ig:ig_mages = { suppress = no }
+    }
+}
+
+sakuya_b3_suppress_ig_clans = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        NOT = { has_variable = sakuya_b3_ig_suppressed_clans_var }
+        exists = ig:ig_clans
+    }
+    effect = {
+        set_variable = sakuya_b3_ig_suppressed_clans_var
+        ig:ig_clans = { suppress = yes }
+    }
+}
+
+sakuya_b3_unsuppress_ig_clans = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        has_variable = sakuya_b3_ig_suppressed_clans_var
+    }
+    effect = {
+        remove_variable = sakuya_b3_ig_suppressed_clans_var
+        ig:ig_clans = { suppress = no }
+    }
+}
+
+# IG approval effects
+sakuya_b3_add_approval_ig_mages = {
+    scope = country
+    effect = {
+        if = {
+            limit = { exists = ig:ig_mages }
+            ig:ig_mages = { add_approval = 10 }
+        }
+    }
+}
+
+sakuya_b3_add_approval_ig_clans = {
+    scope = country
+    effect = {
+        if = {
+            limit = { exists = ig:ig_clans }
+            ig:ig_clans = { add_approval = 10 }
+        }
+    }
+}
+
+# IG clout effects
+sakuya_b3_set_clout_ig_mages = {
+    scope = country
+    effect = {
+        if = {
+            limit = { exists = ig:ig_mages }
+            ig:ig_mages = { set_clout = scope:sakuya_b3_clout_value }
+        }
+    }
+}
+
+sakuya_b3_set_clout_ig_clans = {
+    scope = country
+    effect = {
+        if = {
+            limit = { exists = ig:ig_clans }
+            ig:ig_clans = { set_clout = scope:sakuya_b3_clout_value }
+        }
+    }
+}

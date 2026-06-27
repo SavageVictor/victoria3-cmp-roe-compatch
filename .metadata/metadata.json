@@ -1,0 +1,28 @@
+{
+  "name": "Cheat Menu Pro - RoE Compatch",
+  "id": "compatch.cmp-roe",
+  "version": "1.0",
+  "game_id": "victoria3",
+  "supported_game_version": "1.13.*",
+  "short_description": "Compatibility patch: adds Realms of Exether entities (IGs, laws, institutions, decrees) to Cheat Menu Pro's cheat menus.",
+  "tags": ["compatch", "fix"],
+  "relationships": [
+    {
+      "rel_type": "dependency",
+      "id": "com.gitlab.kevin.solovjov.realms-of-exether",
+      "display_name": "Realms of Exether",
+      "resource_type": "mod",
+      "version": "*"
+    },
+    {
+      "rel_type": "load_after",
+      "id": "com.gitlab.kevin.solovjov.realms-of-exether",
+      "display_name": "Realms of Exether",
+      "resource_type": "mod",
+      "version": "*"
+    }
+  ],
+  "game_custom_data": {
+    "multiplayer_synchronized": true
+  }
+}

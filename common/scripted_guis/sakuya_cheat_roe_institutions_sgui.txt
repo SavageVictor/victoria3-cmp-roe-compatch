@@ -1,0 +1,6 @@
+# Sakuya Cheat Menu Pro - RoE Compatch: Institutions
+
+sakuya_b3_inst_institution_environment_add = { scope = country is_shown = { is_player = yes } effect = { sakuya_roe_institution_player_effect = { INST = institution_environment } } }
+sakuya_b3_inst_institution_environment_add_marked = { scope = country is_shown = { is_player = yes } effect = { sakuya_roe_institution_marked_country_effect = { INST = institution_environment } } }
+sakuya_b3_inst_institution_police_add = { scope = country is_shown = { is_player = yes } effect = { sakuya_roe_institution_player_effect = { INST = institution_police } } }
+sakuya_b3_inst_institution_police_add_marked = { scope = country is_shown = { is_player = yes } effect = { sakuya_roe_institution_marked_country_effect = { INST = institution_police } } }
