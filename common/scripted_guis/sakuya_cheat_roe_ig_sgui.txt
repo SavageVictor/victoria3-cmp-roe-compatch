@@ -1,5 +1,12 @@
 # Sakuya Cheat Menu Pro - RoE Compatch: Interest Group GUI Entries
 
+# Button to open compatch menu from CMP's window
+sakuya_roe_open_compatch_menu = {
+    scope = country
+    is_shown = { is_player = yes }
+    effect = { trigger_event = { id = roe_compatch_menu.1 } }
+}
+
 # Mage IG selection variables
 sakuya_b3_ig_ig_mages_boost = {
     scope = country

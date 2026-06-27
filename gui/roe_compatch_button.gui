@@ -1,0 +1,29 @@
+# Cheat Menu Pro - RoE Compatch: Floating RoE button
+# Appears alongside CMP's main window
+
+widget = {
+    name = "roe_compatch_floating_button"
+    layer = layer_ingame_menu
+    size = { 100% 100% }
+    
+    widget = {
+        visible = "[GetVariableSystem.Exists('sakuya_main_visible')]"
+        parentanchor = right|top
+        position = { -200 55 }
+        size = { 180 35 }
+        
+        button_standard = {
+            name = "roe_compatch_btn"
+            size = { 180 35 }
+            onclick = "[GetScriptedGui('sakuya_roe_open_compatch_menu').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+            
+            textbox = {
+                default_format = "#T"
+                text = "roe_compatch_btn_text"
+                fontsize = 14
+                align = center
+            }
+            using = button_font_style
+        }
+    }
+}

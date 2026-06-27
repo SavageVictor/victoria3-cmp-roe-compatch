@@ -1,4 +1,7 @@
 l_english:
+ # GUI Button
+ roe_compatch_btn_text:0 "RoE Cheats"
+ 
  # Decision
  roe_compatch_open_menu:0 "Open RoE Compatch Menu"
  roe_compatch_open_menu_desc:0 "Access cheat options for Realms of Exether entities."
